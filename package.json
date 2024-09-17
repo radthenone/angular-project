@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 3000 --configuration development",
     "build": "ng build",
+    "prod": "ng build --configuration production",
+    "dev": "ng build --configuration development",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "fake-backend-server": "json-server --watch ./src/db.json --port 8000"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +21,12 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@popperjs/core": "^2.11.6",
+    "@types/jsonwebtoken": "^9.0.7",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "json-server": "^1.0.0-beta.2",
+    "jsonwebtoken": "^9.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -26,6 +35,7 @@
     "@angular-devkit/build-angular": "^15.2.11",
     "@angular/cli": "~15.2.11",
     "@angular/compiler-cli": "^15.2.0",
+    "@angular/localize": "^15.2.0",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
@@ -33,6 +43,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "prettier": "3.3.3",
     "typescript": "~4.9.4"
   }
 }
